@@ -46,15 +46,16 @@ body {
   background-position: center center;
   z-index: 2;  
   width: 100%;
-  height: 100%; 
   color: #fff;
-  position: relative;   
+  position: relative;
+  height: 100%;   
 }
 
 .header::before {
   content: "";
   display: block;
   position: absolute;
+  left: 0;
   top: 0;
   width: 100%;
   height: 100%;
@@ -62,22 +63,15 @@ body {
   background: rgba(0, 0, 0, 0.7);
 }
 
-.top-container {
-  max-width: 480px;
-  width: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-.top-panel {
-  width: 100%;    
+.top-panel {    
   position: relative;
   padding-bottom: 120px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .logo {
-  max-width: 250px;
+  max-width: 270px;
   position: absolute;
   top: 235px;
   left: 50%;
@@ -88,6 +82,7 @@ body {
 .menu {
   display: flex;
   justify-content: flex-end;
+  right: 15px;
   top: 55px;
   position: relative;
   z-index: 2;
@@ -117,12 +112,12 @@ body {
 
 .top-panel__title {
   max-width: 400px;
-  margin: 330px auto 0 auto;       
+  margin: 330px auto 0;       
   font-size: 26px;
   font-weight: 700;
   text-transform: uppercase;    
   text-align: center;  
-  padding: 30px;
+  padding: 20px;
   position: relative;
   z-index: 2;
   color: white;
@@ -132,12 +127,11 @@ body {
 /* ---------------------Тренды-----------------------*/
 
 .trend-section {
-  max-width: 480px;
   width: 100%;
-  position: relative;
-  color: #fff;
   margin: 0 auto;
-  }
+  position: relative;
+  color: #fff;      
+}
 
 .trend-title {
   max-width: 400px;
@@ -165,6 +159,7 @@ body {
 
 .trend-container {
   width: 100%;
+  box-sizing: border-box;
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
@@ -176,16 +171,18 @@ body {
   min-height: 300px;
   padding: 15px;
   position: relative; 
-  display: flex;   
-  flex-direction: column;
+  display: flex; 
   justify-content: flex-end;
-  align-items: center;
+  flex-direction: column;
   color: #fff;
+  box-sizing: border-box;
 }
 
 .trend-post::before {
   content: "";
+  display: block;
   position: absolute;
+  left: 0;
   top: 0;
   width: 100%;
   height: 100%;
@@ -195,6 +192,7 @@ body {
 
 .trend-img {
   position: absolute;
+  left: 0;
   top: 0;
   width: 100%;
   height: 100%;
@@ -206,10 +204,7 @@ body {
   position: relative;
   z-index: 2;
   border: 3px solid #b69f5b;
-  padding: 35px 15px 10px;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-bottom: 5px;
+  padding: 40px 30px 35px;
 }
 
 .trend-tag {
@@ -239,36 +234,35 @@ body {
 .page-content {
   display: flex;
   flex-wrap: wrap;
-  max-width: 480px;
-  width: 100%;
-  margin-top: 0;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  max-width: 330px;
+  margin: 0 auto;
 }
 
 .post-page {
   display: flex;
-  width: 100%;
+  max-width: 330px;
   margin-top: 45px;
   position: relative;
   color: #fff;  
   display: flex;   
   flex-direction: column; 
   gap: 40px;
+  padding-right: 10px;
 }
 
 .post {
   display: flex;
-  position: relative;  
+  position: relative;
+  box-sizing: border-box;   
   flex-wrap: wrap;
 }
 
-.post-img {width: 100%;}
+.post-img {
+  max-width: 330px;
+}
 
 .post-content {
-  width: 100%;
+  max-width: 330px;
   
   display: flex;
   flex-direction: column;
@@ -320,9 +314,8 @@ body {
 /* ------------------Сайдбар--------------------------*/
 
 .sidebar {
-  max-width: 480px;
-  width: 100%;
-  margin-top: 45px;     
+  max-width: 330px;
+  margin-top: 45px;      
 }
 
 .sidebar-widget {
@@ -331,7 +324,7 @@ body {
 }
 
 .title-widget {
-  max-width: 400px;         
+  max-width: 300px;         
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;    
@@ -357,6 +350,7 @@ body {
   margin-top: 30px;
   display: flex;
   position: relative;
+  box-sizing: border-box;
   justify-content: flex-start;
   gap: 20px; 
 }
@@ -377,10 +371,11 @@ body {
 }
 
 .form-search {
-  width: 100%;
-  height: 50px;  
+  box-sizing: border-box;
   margin-top: 60px;
   display: inline-block;
+  max-width: 310px;
+  height: 50px;
 }
 
 .form-search label {
@@ -391,7 +386,8 @@ body {
 }
 
 .field-search {
-  width: calc(100% - 50px);
+  box-sizing: border-box;
+  max-width: 260px;
   height: 50px;
   background-color: #f3f7f6;
   padding: 15px 20px;
@@ -400,6 +396,7 @@ body {
 }
 
 .search-svg {
+  box-sizing: border-box;
   width: 50px;
   height: 50px;
   background-color: #b69f5b;
@@ -408,7 +405,7 @@ body {
 }
 
 .mailing-title {
-  max-width: 400px;         
+  max-width: 290px;         
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;    
@@ -439,7 +436,8 @@ body {
 }
 
 .field-email {
-  width: 100%;
+  box-sizing: border-box;
+  width: 310px;
   height: 50px;
   background-color: #f3f7f6;
   padding: 15px 20px;
@@ -448,7 +446,8 @@ body {
 }
 
 .button-email {
-  width: 100%;
+  box-sizing: border-box;
+  max-width: 310px;
   height: 50px;
   background-color: #b69f5b;
   border: none;
@@ -459,7 +458,7 @@ body {
 }
 
 .tags-title {
-  max-width: 400px;         
+  max-width: 290px;         
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;    
@@ -502,7 +501,7 @@ body {
 }
 
 .categorie-title {
-  max-width: 400px;         
+  max-width: 290px;         
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;    
@@ -554,19 +553,18 @@ body {
 
 /* ------------------Магазин--------------------------*/
 
+/* .shop-section {
+  width: 1200px;
+} */
+
 .shop {
   display: flex;
-  max-width: 480px;
-  width: 100%;
-  margin-top: 0;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  max-width: 330px;
+  margin: 0 auto;
 }
 
 .shop-title {
-  max-width: 400px;         
+  max-width: 290px;         
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;    
@@ -590,51 +588,43 @@ body {
 
 .shop-content {
   display: flex;
-  justify-content: center;
+  position: relative;
   flex-wrap: wrap;
   gap: 30px;
 }
 
 .product-container {
-  width: 100%;
+  max-width: 330px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
 }
 
 .product-img {
-  width: calc(100% - 60px);
-  position: relative;
-  z-index: 2;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: -45px;
+  max-width: 290px;
+  position: absolute;
+  z-index: 1;
 }
 
 .product-content {
-  width: 100%;
-  height: 300px;
+  height:250px;
+  margin-top: 180px;
   border: 2px solid #b69f5b;
-  padding: 65px 30px 10px;
-  z-index: 1;
-  background-color: #fff;
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  padding: 45px 30px 25px;
+  z-index: 2;
 }
 
 .product-name {
   font-size: 17px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  
 }
 
 .product-description {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.2;
-  flex: 1;
+  padding-bottom: 20px;
 }
 
 .product-description a {
@@ -644,9 +634,7 @@ body {
 .price-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;  
-  gap: 5px;
-  margin-top: auto;
+  align-items: flex-end;
 }
 
 .price h5 {
@@ -673,7 +661,8 @@ body {
 }
 
 .button-shop {
-  width: 110px;
+  box-sizing: border-box;
+  width: 140px;
   height: 50px;
   background-color: #b69f5b;
   border: none;
@@ -681,23 +670,14 @@ body {
   font-size: 15px;
   font-weight: 700;
   color: #fff;
-  cursor: pointer;
-  transform: background-color 0.3s;  
-}
-
-.button-shop:hover {
-  background-color: #8e7b4a;
 }
 
 /* ------------------Футер--------------------------*/
 
 .socials {
-  max-width: 480px;
-  width: 100%;
+  max-width: 330px;
   height: 85px;
-  box-sizing: border-box;
   margin: 60px auto 20px;
-  padding: 15px;
   list-style-type: none; 
   display: flex;
   background-color: #f4f7f6;
@@ -762,77 +742,8 @@ body {
 /* Мобилки - ландшафт */
 @media (min-width: 481px) and (max-width: 640px) {
 
-  .top-container {
-    max-width: 640px;
-    width: 100%;
-    padding: 0 15px;
-    margin: 0 auto;
-  }
-
-  .top-panel {width: 100%;}
-
-  .trend-section {
-    max-width: 640px;
-    width: 100%;
-  }
-
-  .trend-container {width: 100%;}
-
   .trend-post {
     width: calc(50% - 2.5px);
-  }
-
-  .page-content {
-    max-width: 640px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .post-page {width: 100%;}
-
-  .post-img {width: 100%;}
-
-  .post-content {width: 100%;}
-
-  .sidebar {
-    max-width: 640px;
-    width: 100%;
-  }
-
-  .form-search {width: 100%;}
-
-  .field-search {width: 100%;}
-
-  .field-email {width: 100%;}
-
-  .button-email {width: 100%;} 
-
-  .shop {
-    max-width: 640px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .shop-content {gap: 20px;}
-
-  .product-container {width: calc(50% - 10px);}
-
-  .product-img {
-    width: calc(100% - 60px);
-    margin-bottom: -45px;
-  }
-
-  .product-content {
-    padding: 65px 20px 10px;
-  }
-
-  .socials {
-    max-width: 640px;
-    width: 100%;
-    padding: 15px;
   }
 }
 
@@ -844,15 +755,8 @@ body {
     height: 400px;
   }
 
-  .top-container {
-    max-width: 900px;
-    width: 100%;
-    padding: 0 15px;
-    margin: 0 auto;
-  }
-
   .top-panel {
-    width: 100%;
+    max-width: 800px;
   }
 
   .logo {
@@ -867,14 +771,8 @@ body {
     max-width: 700px;
     line-height: 1.7;
     margin: 100px auto 0;
-  }
-  
-  .trend-section {
-    max-width: 900px;
-    width: 100%;
-  }
+  }  
 
-  .trend-container {width: 100%;}
 
   .trend-title {
     font-size: 18px;
@@ -883,30 +781,27 @@ body {
   .trend-post {
     width: calc(50% - 2.5px);
   }
-    
+  
+  
   .page-content {
-    max-width: 900px;
-    width: 100%;
-    margin: 0 auto;    
-    padding: 0 15px;
+    max-width: 690px;
     flex-wrap: nowrap;
-    gap: 30px;
+    gap: 20px;
   }
 
   .post-page {
-    max-width: 600px;
-    width: 100%;
+    max-width: 390px;
     margin-top: 50px;
     gap: 50px;
   }
 
   .post-img {
-    width: 100%;
+    max-width: 390px;
     align-content: flex-start;
   }
 
   .post-content {
-    width: 100%;
+    max-width: 390px;
     align-content: flex-start;
   }
 
@@ -925,45 +820,53 @@ body {
 
     
   .sidebar {
-    width: 270px;
+    max-width: 270px;
     margin-top: 50px;
     justify-content: end;
   }
 
-  .title-widget {font-size: 14px;}
+  .title-widget {
+    font-size: 14px;
+  }
 
-  .form-search {width: 270px;}  
+  .form-search {
+    max-width: 270px;
+  }  
 
-  .field-search {width: 220px;} 
+  .field-search {
+    max-width: 220px;
+  } 
   
-  .mailing-title {font-size: 14px;}  
+  .mailing-title {
+    font-size: 14px;
+  }  
 
-  .field-email {width: 270px;}
+  .field-email {
+    max-width: 270px;
+  }
 
-  .button-email {width: 270px;} 
+  .button-email {
+    max-width: 270px;
+  } 
 
-  .tags-title {font-size: 14px;}
+  .tags-title {
+    font-size: 14px;
+  }
 
-  .categorie-title {font-size: 14px;}
+  .categorie-title {
+    font-size: 14px;
+  }   
 
-
-  .shop {
-    max-width: 900px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    .shop {
+    max-width: 690px;
   }
 
   .shop-title {
     font-size: 18px;
   }  
 
-  .shop-content {gap: 20px;}
-
-  .product-container {
-    width: calc(50% - 10px);
+  .shop-content {
+    gap: 30px;
   }
 
   .price-container {
@@ -971,24 +874,15 @@ body {
   } 
   
   .socials {
-    max-width: 900px;
-    width: 100%;
-    padding: 15px;
+    max-width: 690px;
   }  
 }
 
 /* Планшеты - ландшафт */
 @media (min-width: 901px) and (max-width: 1200px) {
 
-  .top-container {
-    max-width: 1200px;
-    width: 100%;
-    padding: 0 15px;
-    margin: 0 auto;
-  }
-
   .top-panel {
-    max-width: 100%;
+    max-width: 1100px;
   }
 
   .logo {
@@ -1003,61 +897,25 @@ body {
     max-width: 700px;
     line-height: 1.7;
     margin: 100px auto 0;
-  }
-  
-  .trend-section {
-    max-width: 1200px;
-    width: 100%;
-  }
+  }  
 
-  .trend-container {width: 100%;}
 
   .trend-post {
     width: calc(25% - 3.75px);
   }
 
   .page-content {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
+    max-width: 690px;
     flex-wrap: nowrap;
-    gap: 30px;
+    gap: 20px;
   }
-
-  .post-page {
-    max-width: 900px;
-    width: 100%;
-  }
-
-  .post-img {width: 100%;}
-
-  .post-content {width: 100%;}
-
-  .sidebar {width: 270px;}
-
 
   .shop {
-    max-width: 1200px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    max-width: 690px;
   }  
-
-  .shop-title {
-    font-size: 18px;
-  }  
-  
-  .product-container {
-    width: calc(33.3% - 20px);
-  }
 
   .socials {
-    max-width: 1200px;
-    width: 100%;
-    padding: 15px;
+    max-width: 690px;
   }    
 }
 
@@ -1068,13 +926,6 @@ body {
     background-image: url("../images/banner-bg.jpg");
     height: 450px;
   }
-
-  .top-container {
-    max-width: 1200px;
-    width: 100%;
-    padding: 0 15px;
-    margin: 0 auto;
-  }  
 
   .top-panel {
     max-width: 1200px;
@@ -1117,13 +968,11 @@ body {
     line-height: 1.8;
   }
 
-  .trend-section {
-    width: 100%;    
-    max-width: 100%;
-    margin: 0 auto;
+  
+  .trend-title {
+    max-width: 700px;
+    font-size: 20px;
   }
-
-  .trend-title {font-size: 20px;}
 
   .trend-post {
     width: calc(25% - 3.75px);
@@ -1133,12 +982,11 @@ body {
   .page-content {
     max-width: 1200px; 
     flex-wrap: nowrap;
-    gap: 30px;
+    gap: 20px;
   }
 
   .post-page {
     max-width: 900px;
-    width: 100;
     margin-top: 60px;
     gap: 60px;
   }
@@ -1148,13 +996,21 @@ body {
     gap: 30px;
   }
 
-  .post-img {max-width: 400px;}
+  .post-img {
+    max-width: 400px;
+  }
 
-  .post-content {max-width: 400px;}
+  .post-content {
+    max-width: 400px;
+  }
 
-  .post-tag {padding-top: 0;}
+  .post-tag {
+    padding-top: 0;
+  }
 
-  .post-title-link {font-size: 20px;}
+  .post-title-link {
+    font-size: 20px;
+  }
 
   .post-meta {
     padding-top: 35px;
@@ -1167,7 +1023,7 @@ body {
 
 
   .sidebar {
-    width: 270px;
+    max-width: 270px;
     margin-top: 65px;
   }
 
@@ -1175,28 +1031,62 @@ body {
     font-size: 16px;
   }
 
+  .form-search {
+    max-width: 270px;
+  }  
+
+  .field-search {
+    max-width: 220px;
+  } 
+  
+  .mailing-title {
+    font-size: 14px;
+  }
+
+  .field-email {
+    max-width: 270px;
+  }
+
+  .button-email {
+    max-width: 270px;
+  } 
+  
+
+  .tags-title {
+    font-size: 14px;
+  }
+
+  .categorie-title {
+    font-size: 14px;
+  }  
 
   .shop {
     max-width: 1200px;
-    width: 100%;
   }
 
   .shop-title {
     font-size: 20px;
   }  
 
-  .product-container {
-    width: calc(33.3% - 20px);
+
+  .shop-content {
+    gap: 60px;
   }
- 
+
+  .price-container {
+    max-width: 360px;
+  }  
+
+  .product-img {
+    max-width: 300px;
+  }
+
   .product-name {
     font-size: 20px;
   }
 
   .socials {
     max-width: 1200px;
-    width: 100%;
-    padding: 15px;
   }  
 }
 
